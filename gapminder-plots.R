@@ -13,4 +13,9 @@ ggplot(gapminder,aes(y = lifeExp, x = gdpPercap)) +
   labs(x = "GDP Per Capita", y = "Life Expectancy") +
   geom_smooth(method="lm", color = "red")
 
+japan_gapminder <- gapminder[gapminder$country == "Japan", ]
 
+ggplot(japan_gapminder, aes(x=year, y=lifeExp)) +
+  geom_line(color = "coral") +
+  xlab("Life Expectancy") + ylab("Year")
+  
